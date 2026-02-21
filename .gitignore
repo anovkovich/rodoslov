@@ -1,0 +1,91 @@
+# =========================
+# GENERAL / GLOBAL
+# =========================
+# Ignore node_modules anywhere (root, frontend, etc.)
+node_modules
+
+
+.idea/
+
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Keys/Secrets
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Env files (Crucial: ignores .env in root, frontend, and backend)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# =========================
+# FRONTEND (Next.js / Yarn)
+# =========================
+# Next.js build output (Removed leading slash so it works in frontend/)
+.next/
+out/
+
+# Production build
+build/
+
+# Testing coverage
+coverage/
+
+# Yarn v2+ (Berry) specific
+.pnp
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# =========================
+# BACKEND (Python / FastAPI)
+# =========================
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Python Bytecode & Cache (Don't commit these!)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / Packaging
+dist/
+eggs/
+*.egg-info/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/

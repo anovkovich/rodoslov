@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Geist,
+  Geist_Mono,
+  Great_Vibes,
+} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext", "cyrillic"],
 });
 
 const geistMono = Geist_Mono({
@@ -12,12 +17,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
-  title: "NNekretine",
-  description: "NNekretine - pretraga i ponuda nekretnina",
+  title: "Family Tree Builder",
+  description:
+    "Build your family tree interactively — flat and circular (Ahnentafel) views with HD PDF export.",
   openGraph: {
-    title: "NNekretine",
-    description: "NNekretine - pretraga i ponuda nekretnina",
+    title: "Family Tree Builder",
+    description:
+      "Build your family tree interactively — flat and circular (Ahnentafel) views with HD PDF export.",
     type: "website",
   },
 };
@@ -28,9 +48,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sr" data-theme="bumblebee">
+    <html lang="sr" data-theme="corporate">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${greatVibes.variable} antialiased min-h-screen bg-base-200`}
       >
         {children}
       </body>

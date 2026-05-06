@@ -1,7 +1,5 @@
+import Landing from "@/components/landing/Landing";
+
 export default function Home() {
-  return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold">NNekretine</h1>
-    </main>
-  );
+  return <Landing />;
 }
